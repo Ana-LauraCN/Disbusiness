@@ -1,0 +1,74 @@
+/* Arquivo: stylealterarusuario.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 400px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px; /* Aumentei o espaço abaixo do título */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+}
+
+input[type="submit"] {
+    padding: 10px 20px; /* Ajustado para mais espaço lateral */
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}

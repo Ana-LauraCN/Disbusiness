@@ -9,7 +9,7 @@ $usuarioDAO = new UsuarioDAO();
 
 $retorno = $usuarioDAO->pesquisarUsuarioPorId($id_user);
 
-var_dump($retorno);
+// var_dump($retorno);
 ?>
 
 <!DOCTYPE html>
@@ -18,11 +18,17 @@ var_dump($retorno);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylealteraruser.css">
+    <script>
+        function confirmAlterar() {
+            return confirm("Deseja realmente alterar?");
+        }
+    </script>
     <title>Alterar</title>
 </head>
 <body>
-    <h1>Alterar</h1>
-    <form action="../control/alterarUsuariocontrol.php" method="post">
+    
+    <form action="../control/alterarUsuariocontrol.php" method="post" onsubmit="return confirmAlterar();">
         <input type="hidden" name="id_user" value="<?php
         echo $retorno["id_user"];?>"><br>
     

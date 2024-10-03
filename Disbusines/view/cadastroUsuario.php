@@ -23,6 +23,7 @@
                 <!-- //card-login -->
                 <h1>LOGIN</h1>
                 <form action="../control/usuarioControl.php" method="post">
+               
                 <div class="text-field">
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" placeholder="nome">

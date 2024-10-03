@@ -7,14 +7,22 @@ $id_user =$_GET['id_user'];
 
 $usuarioDAO = new UsuarioDAO();
 
-$sucesso = $usuarioDAO->excluirUsuario($id_user);
+$excluido = $usuarioDAO->excluirUsuario($id_user);
 
-if($sucesso){
-    header('Location:../view/listarUsuarios.php');
+// if($sucesso){
+//     header('Location:../view/listarUsuarios.php');
+// }
+
+
+if ($excluido) {
+    // Redireciona para a página de listagem com um alerta
+    header("Location: ../view/listarUsuarios.php?msg=excluido");
+    exit();
+} else {
+    // Caso de erro na exclusão, redireciona para a lista sem mensagem
+    header("Location: ../view/listarUsuarios.php?msg=erro");
+    exit();
 }
-
-
-
 
 
 ?>
